@@ -1,9 +1,23 @@
 package main
 
 import (
+	"fmt"
 	"html/template"
 	"log"
 	"net/http"
+	"os"
+)
+
+func StringEnv(key string) string {
+	value, ok := os.LookupEnv(key)
+	if !ok {
+		log.Fatalf("address env variable \"%s\" not set, usual", key)
+	}
+	return value
+}
+
+var (
+	DEX_URL = StringEnv("DEX_URL")
 )
 
 func main() {
@@ -20,7 +34,9 @@ func main() {
 		tmpl.Execute(w, nil)
 	})
 
-	err := http.ListenAndServe(":8081", nil)
+    addr := fmt.Sprintf("%s:%s", DEX_URL, "8081")
+
+	err := http.ListenAndServe(addr, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
