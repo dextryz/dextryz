@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Geist';
+    src: url('fonts/Geist/Geist-Thin.otf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('fonts/Geist/Geist-Bold.otf') format('truetype');
+    font-weight: bold;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    line-height: 1.5;
+}
+
+:root {
+    --gray: hsla(0,0%,100%,0.5);
+    --line: #4c515a;
+    --bg: #121212;
+    --fg: #d9d9d9;
+    --link: #bb86fc;
+    --purple: #bb86fc;
+}
+
+body {
+    font-family: 'Geist';
+    min-height: 100vh;
+    margin: 0px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: var(--fg);
+    background: var(--bg);
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+h1 {
+    color: var(--gray);
+    font-weight: bold;
+    font-size: medium;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: medium;
+}
+
+a {
+    color: var(--fg);
+    text-decoration: underline; /* Removes the underline */
+    text-decoration-color: var(--line); /* Change 'blue' to your desired color */
+}
+
+a:hover {
+    color: var(--gray);
+    text-decoration-color: var(--line); /* Change 'blue' to your desired color */
+}
+
+h3 {
+    display: inline-block;
+    border-bottom: 1px solid var(--purple);
+    text-decoration: none; /* Removes the underline */
+    font-weight: bold;
+    font-size: small;
+}
+
+.projects a {
+    text-decoration: none; /* Removes the underline */
+}
+
+.projects a:hover {
+    color: var(--gray);
+}
+
+footer {
+    margin-top: auto;
+}
+
+.connect {
+    display: flex;
+    justify-content: space-between;
+}
+
+.connect span {
+    color: var(--gray);
+    font-size: 14px;
+    padding: 4px;
+}
+
+footer hr {
+    margin-bottom: 1.5em;
+    border-color: var(--line);
+    border-top-width: 1px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.img-nostr {
+    filter: grayscale(100%) brightness(250%) contrast(120%);
+}
+
+.img-github {
+    filter: grayscale(100%) brightness(400%) contrast(120%);
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.projects > * {
+    max-width: 200px;
+    flex: 1; 
+    word-wrap: break-word; /* Breaks long words if necessary */
+    overflow-wrap: break-word; /* Breaks long words if necessary (similar to word-wrap) */
+    white-space: normal; /* Allows text to wrap */
+}
