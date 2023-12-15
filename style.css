@@ -33,7 +33,7 @@ body {
     margin: 10px auto;
     max-width: 650px;
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 17px;
     color: var(--fg);
     background: var(--bg);
     display: flex;
@@ -72,7 +72,7 @@ h3 {
     border-bottom: 1px solid var(--purple);
     text-decoration: none; /* Removes the underline */
     font-weight: bold;
-    font-size: small;
+    font-size: 15px;
 }
 
 .projects a {
