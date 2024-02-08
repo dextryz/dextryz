@@ -19,7 +19,7 @@ func main() {
 
 	tmpl := template.Must(template.ParseFiles("index.html"))
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
 		tmpl.Execute(w, nil)
 	})
 
