@@ -79,3 +79,14 @@ server {
     }
 }
 ```
+
+## Run Server in Background
+
+```shell
+# Run server
+nohup ./dextryz > output.log 2>&1 &
+
+# Kill server
+pgrep -f dextryz | xargs kill
+```
+
