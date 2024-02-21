@@ -5,11 +5,12 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	//"os"
 )
 
 func main() {
 
-    log.Println("starting server")
+	log.Println("starting server")
 
 	http.Handle("/fonts/", http.StripPrefix("/fonts/", http.FileServer(http.Dir("./fonts"))))
 	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir("./images"))))
@@ -23,9 +24,11 @@ func main() {
 		tmpl.Execute(w, nil)
 	})
 
-    addr := fmt.Sprintf("%s:%s", "127.0.0.1", "8080")
+	host := "127.0.0.1"
+	//port := os.Getenv("PORT")
+    port := "8080"
 
-	err := http.ListenAndServe(addr, nil)
+	err := http.ListenAndServe(fmt.Sprintf("%s:%s", host, port), nil)
 	if err != nil {
 		log.Fatal(err)
 	}
