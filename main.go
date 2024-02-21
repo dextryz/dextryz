@@ -5,7 +5,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
-	//"os"
+	"os"
 )
 
 func main() {
@@ -24,11 +24,15 @@ func main() {
 		tmpl.Execute(w, nil)
 	})
 
-	host := "127.0.0.1"
-	//port := os.Getenv("PORT")
-    port := "8080"
+	port := os.Getenv("PORT")
+    if port == "" {
+        port = "3000"
+    }
+    addr := fmt.Sprintf("%s:%s", "0.0.0.0", port)
 
-	err := http.ListenAndServe(fmt.Sprintf("%s:%s", host, port), nil)
+    log.Printf("serving on addr: %s", addr)
+
+	err := http.ListenAndServe(addr, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
