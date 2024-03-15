@@ -25,12 +25,12 @@ func main() {
 	})
 
 	port := os.Getenv("PORT")
-    if port == "" {
-        port = "3000"
-    }
-    addr := fmt.Sprintf("%s:%s", "0.0.0.0", port)
+	if port == "" {
+		port = "3000"
+	}
+	addr := fmt.Sprintf("%s:%s", "0.0.0.0", port)
 
-    log.Printf("serving on addr: %s", addr)
+	log.Printf("serving on addr: %s", addr)
 
 	err := http.ListenAndServe(addr, nil)
 	if err != nil {

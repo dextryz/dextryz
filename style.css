@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Geist';
-    src: url('fonts/Geist/Geist-Thin.otf') format('truetype');
+    src: url('fonts/Geist/Geist-Light.otf') format('truetype');
     font-weight: normal;
 }
 
@@ -33,7 +33,7 @@ body {
     margin: 10px auto;
     max-width: 650px;
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--fg);
     background: var(--bg);
     display: flex;
