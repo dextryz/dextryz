@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Geist';
-    src: url('fonts/Geist/Geist-Light.otf') format('truetype');
+    src: url('fonts/Geist/Geist-UltraLight.otf') format('truetype');
     font-weight: normal;
 }
 
@@ -38,11 +38,8 @@ body {
     background: var(--bg);
     display: flex;
     flex-flow: column wrap;
-    gap: 2rem;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 h1 {
