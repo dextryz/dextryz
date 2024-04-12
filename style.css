@@ -31,7 +31,7 @@ body {
     font-family: 'Geist';
     min-height: 100vh;
     margin: 10px auto;
-    max-width: 650px;
+    max-width: 50rem;
     line-height: 1.6;
     font-size: 15px;
     color: var(--fg);
@@ -40,6 +40,18 @@ body {
     flex-flow: column wrap;
     gap: 1rem;
     padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3rem;
 }
 
 h1 {
@@ -82,6 +94,7 @@ h3 {
 
 footer {
     margin-top: auto;
+    padding-right: 3rem;
 }
 
 .connect {
