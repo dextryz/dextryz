@@ -81,7 +81,7 @@ h3 {
     border-bottom: 1px solid var(--purple);
     text-decoration: none; /* Removes the underline */
     font-weight: bold;
-    font-size: small;
+    font-size: 0.8rem;
 }
 
 .projects a {
